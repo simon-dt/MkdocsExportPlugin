@@ -1,0 +1,9 @@
+[
+    {% for page in pages %}
+    {
+        "title": "{{page.title}}",
+        "file": "{{page.file.name}}",
+        "content":"{{page.content|escape}}"
+    }{%if loop.nextitem %},{%endif%}
+    {% endfor %}
+]
